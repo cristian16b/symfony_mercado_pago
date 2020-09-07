@@ -22,6 +22,12 @@ class IndexController extends AbstractController
             "pending" => "/pending"
         );
         // $preference->auto_return = "approved";
+        $preference->payment_methods = array(
+            "excluded_payment_types" => array(
+              array("id" => "ticket")
+            ),
+            "installments" => 12,
+        );
 
 // Crea un ítem en la preferencia
         $item = new MercadoPago\Item();
