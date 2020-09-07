@@ -34,16 +34,9 @@ class IndexController extends AbstractController
             )
         );
     }
+    // nota para descaegar los usuarios correr el siguiente comando en el cmd de windows
+    // curl -X POST -H "Content-Type: application/json" "https://api.mercadopago.com/users/test_user?access_token=TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015" -d "{'site_id':'MLA'}"
 
-    // curl -X POST \-H "Content-Type: application/json" \"https://api.mercadopago.com/users/test_user?access_token=TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015" \-d '{"site_id":"MLA"}'
-
-    /**
-    * @Route("/descargar/usuario", name="descargar_usuario")
-    */
-    public function descargarCategoriasAction(){
-        $url = 'https://api.mercadopago.com/users/test_user?access_token=TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015';
-        $data = file_get_contents($url);
-        file_put_contents('./../usuario.json',$data);
-        die;
-    }
+    // si da error de 0x80092013, correrlo como sigue
+    // curl -X POST -H "Content-Type: application/json" "https://api.mercadopago.com/users/test_user?access_token=TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015" -d "{'site_id':'MLA'}" --ssl-no-revoke
 }
