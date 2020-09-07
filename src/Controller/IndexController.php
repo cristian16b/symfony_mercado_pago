@@ -32,6 +32,16 @@ class IndexController extends AbstractController
         $preference->items = array($item);   
         $preference->save();
 
+        $payer = new MercadoPago\Payer();
+        $payer->name = "Charles";
+        $payer->surname = "Luevano";
+        $payer->email = "charles@hotmail.com";
+        $payer->date_created = "2018-06-02T12:58:41.425-04:00";
+        $payer->phone = array(
+            "area_code" => "",
+            "number" => "949 128 866"
+        );
+
         // dump($preference);die;
 
         return $this->render(
