@@ -21,7 +21,7 @@ class IndexController extends AbstractController
             "failure" => "/failure",
             "pending" => "/pending"
         );
-        $preference->auto_return = "approved";
+        // $preference->auto_return = "approved";
 
 // Crea un ítem en la preferencia
         $item = new MercadoPago\Item();
