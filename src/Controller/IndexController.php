@@ -16,6 +16,12 @@ class IndexController extends AbstractController
 
 // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
+        $preference->back_urls = array(
+            "success" => "/success",
+            "failure" => "/failure",
+            "pending" => "/pending"
+        );
+        $preference->auto_return = "approved";
 
 // Crea un ítem en la preferencia
         $item = new MercadoPago\Item();
