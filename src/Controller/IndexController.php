@@ -23,7 +23,7 @@ class IndexController extends AbstractController
         $preference->items = array($item);   
         $preference->save();
 
-        dump($preference);die;
+        // dump($preference);die;
 
         return $this->render(
             'index.html.twig',array(
