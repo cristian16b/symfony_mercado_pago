@@ -1,1 +1,8 @@
-Boton de Pago: <a href="{{ url }}" target="_blank">PAGAR!</a>
+{# Boton de Pago: <a href="{{ url }}" target="_blank">PAGAR!</a> #}
+{# {{ preferenceId }} #}
+<form action="/procesar-pago" method="POST"> 
+  <script
+   src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+   data-preference-id="{{ preferenceId }}">
+  </script>
+</form> 

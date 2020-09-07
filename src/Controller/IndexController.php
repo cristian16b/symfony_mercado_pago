@@ -12,7 +12,7 @@ class IndexController extends AbstractController
     public function index()
     {
         // Agrega credenciales
-        MercadoPago\SDK::setAccessToken('TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015');
+        MercadoPago\SDK::setAccessToken('TEST-998797040263492-090716-a75fdcc3a6017acac150d2ec98b3654b-639810402');
 
 // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
@@ -26,11 +26,12 @@ class IndexController extends AbstractController
         $preference->items = array($item);   
         $preference->save();
 
-        // dump($preference->init_point);die;
+        // dump($preference);die;
 
         return $this->render(
             'index.html.twig',array(
-                'url' => $preference->init_point
+                // 'url' => "https://www.mercadopago.com.ar/checkout/v1/modal/?preference-id=" . $preference->id
+                'preferenceId' => $preference->id
             )
         );
     }
@@ -41,6 +42,8 @@ class IndexController extends AbstractController
     // curl -X POST -H "Content-Type: application/json" "https://api.mercadopago.com/users/test_user?access_token=TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015" -d "{'site_id':'MLA'}" --ssl-no-revoke
 
     // usuarios de prueba creados
-    // {"id":639810402,"nickname":"TEST6LKXIIVN","password":"qatest1603","site_status":"active","email":"test_user_11815040@testuser.com"}
+    // VENDEDOR
+    // {"id":639810402,"nickname":"TEST6LKXIIVN","password":"qatest1603","site_status":"active","email":"test_user_11815040@testuser.com"} 
+    // COMPRADOR
     // {"id":639809221,"nickname":"TEST2A0RSAII","password":"qatest4330","site_status":"active","email":"test_user_44600499@testuser.com"}
 }
