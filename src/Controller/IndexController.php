@@ -39,4 +39,8 @@ class IndexController extends AbstractController
 
     // si da error de 0x80092013, correrlo como sigue
     // curl -X POST -H "Content-Type: application/json" "https://api.mercadopago.com/users/test_user?access_token=TEST-6864113784926029-082523-64405d2ff4a697e4df1bedc147234d55-167188015" -d "{'site_id':'MLA'}" --ssl-no-revoke
+
+    // usuarios de prueba creados
+    // {"id":639810402,"nickname":"TEST6LKXIIVN","password":"qatest1603","site_status":"active","email":"test_user_11815040@testuser.com"}
+    // {"id":639809221,"nickname":"TEST2A0RSAII","password":"qatest4330","site_status":"active","email":"test_user_44600499@testuser.com"}
 }
