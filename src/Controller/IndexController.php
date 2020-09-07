@@ -29,6 +29,8 @@ class IndexController extends AbstractController
         $item->description = 'Descripción de Mi producto';
         $item->quantity = 1;
         $item->unit_price = 75.8;
+        $item->category_id = "automotive";
+        $item->currency_id = "ARS";
         $preference->items = array($item);   
         $preference->save();
 
