@@ -19,7 +19,7 @@ class IndexController extends AbstractController
         $item->title = 'Mi producto';
         $item->description = 'Descripción de Mi producto';
         $item->quantity = 1;
-        $item->unit_price = 75;
+        $item->unit_price = 75.8;
         $preference->items = array($item);   
         $preference->save();
 
