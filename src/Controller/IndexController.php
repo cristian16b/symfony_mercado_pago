@@ -70,4 +70,15 @@ class IndexController extends AbstractController
     // {"id":639810402,"nickname":"TEST6LKXIIVN","password":"qatest1603","site_status":"active","email":"test_user_11815040@testuser.com"} 
     // COMPRADOR
     // {"id":639809221,"nickname":"TEST2A0RSAII","password":"qatest4330","site_status":"active","email":"test_user_44600499@testuser.com"}
+
+    /**
+    * @Route("/vincular/vendedor", name="vincular_vendedor")
+    */
+    public function vincularVendedorAction(Request $request) {
+        dump($request->query->get('code'));
+        die('en desarollo...');
+    }
+   
+    // NOTA LA SIGUIENTE URL ES  LA QUE SE DEBEN REDIGIRLOS USUARIOS
+    // https://auth.mercadopago.com.ar/authorization?client_id=6864113784926029&response_type=code&platform_id=mp&redirect_uri=http://localhost/symfony_mercado_pago/public/index.php/vincular/vendedor
 }
